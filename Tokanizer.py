@@ -1,7 +1,8 @@
 import nltk
+from nltk.tokenize import TweetTokenizer
 
 
-class TOC(object):
+class TOC():
     """
     Types_tokenizer
     """
@@ -20,5 +21,6 @@ class TOC(object):
 
         return(nltk.regexp_tokenize(self.seq, pattern))
 
-    def tweet(self):
-        return(nltk.tokenize.TweetTokenizer(self.se))
+    def from_tweet(self):
+        tk = TweetTokenizer()
+        return(tk.tokenize(self.seq))
